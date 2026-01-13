@@ -16,7 +16,7 @@ export type Chapter =
   | "Sisters of Battle"
   | "Custodies";
 
-export interface Soldier {
+export interface Marine {
   id: number;
   name: string;
   rank: Rank;
@@ -25,7 +25,7 @@ export interface Soldier {
 }
 
 // Exporta un array listo para usar (sin función envolviendo)
-export const soldiers: Soldier[] = [
+export const marines: Marine[] = [
   {
     id: 1,
     name: "Titus",
@@ -65,6 +65,13 @@ export const soldiers: Soldier[] = [
   {
     id: 7,
     name: "Dimitri",
+    rank: "Captain",
+    chapter: "Space Wolves",
+    status: true,
+  },
+  {
+    id: 8,
+    name: "Klaus",
     rank: "Captain",
     chapter: "Space Wolves",
     status: true,

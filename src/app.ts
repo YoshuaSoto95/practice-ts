@@ -2,7 +2,7 @@ import http from "http";
 import fs from "fs";
 import path from "path";
 import { parse } from "url";
-import { soldiers } from "./module/soldiers";
+import { marines } from "./data/marines";
 
 const PORT = 4000;
 const PUBLIC_DIR = path.join(__dirname, "public");
@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
 
   // API JSON
   if (pathname === "/api/soldiers") {
-    const body = JSON.stringify(soldiers);
+    const body = JSON.stringify(marines);
     res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
     return res.end(body);
   }

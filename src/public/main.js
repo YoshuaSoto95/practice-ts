@@ -3,7 +3,7 @@ async function loadSoldiers() {
   if (!root) return;
 
   try {
-    const res = await fetch("/api/soldiers");
+    const res = await fetch("/api/marines");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 
